@@ -47,3 +47,4 @@ Set root to static home.
 
 Added `app/controllers/static_controller.rb`, defined home route rendering hello world json.
 
+It works.
