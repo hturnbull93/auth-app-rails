@@ -147,4 +147,8 @@ In `app/controllers/sessions_controller.rb`:
 
 Included the CurrentUserConcern.
 
-Added logged_in route using `@current_user` from the concern.
+Added logged_in route using `@current_user` from the concern. If there is a current user render json with logged in true and the current user, else render json with logged in false.
+
+Added logout route, which resets the session with `reset_session` (better than `session.clear`), and renders json with status 200 (it worked), and logged_in false.
+
+
