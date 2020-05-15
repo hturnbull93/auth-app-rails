@@ -21,4 +21,21 @@ BCrypt for ActiveModel `has_secure_password`.
 
 Rack-Cors to allow CORS requests from specified domains
 
+## Prepare CORS and Session Store
 
+In `config/initializers/cors.rb`:
+
+Allow an origin domain, specify all resources with any headers and array of methods, and credentials as true.
+
+Credentials is very important as this allows cookies to be served to the browser.
+
+Do this for localhost:3000 (where React app will run on in development).
+
+Also can allow the production domain (I will add this later if this gets deployed)
+
+
+
+
+
+
+In `config/initializers/session_store.rb`:
