@@ -41,7 +41,7 @@ Configure a session store for a cookie store, key of '_authentication_app' (name
 
 ### Routes
 
-In `config/routes.rb':
+In `config/routes.rb`:
 
 Set root to static home.
 
@@ -62,4 +62,18 @@ In `app/models/user.rb`:
 
 Added `has_secure_password` method. This allows ActiveRecord password hashing and authentication methods with BCrypt.
 
-Validates email, must be present and unique
+Validates email, must be present and unique.
+
+When creating a user a password and also a password_confirmation can be supplied, if both are the same then the user can be created (as long as the email is unique).
+
+### Sessions Route
+
+In `config/routes.rb` added sessions with create as a resources.
+
+In `app/controllers/sessions_controller.rb` create route:
+
+Find user by email and using '&.' (safe navigation) attempt to `authenticate` with password.
+
+`params` are nested within user.
+
+
