@@ -31,16 +31,19 @@ Credentials is very important as this allows cookies to be served to the browser
 
 Do this for localhost:3000 (where React app will run on in development).
 
-Also can allow the production domain (I will add this later if this gets deployed)
+Also can allow the production domain (I will add this later if this gets deployed).
 
 ### Configure Session Store
 
 In `config/initializers/session_store.rb`:
 
-Configure a session store for a cookie store, key of '_authentication_app' (name of the cookie), and the domain (localhost:3001 for now)
+Configure a session store for a cookie store, key of '_authentication_app' (name of the cookie), and the domain (localhost:3001 for now).
 
 ### Routes
 
 In `config/routes.rb':
 
-Set root to static home 
+Set root to static home.
+
+Added `app/controllers/static_controller.rb`, defined home route rendering hello world json.
+
