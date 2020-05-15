@@ -66,7 +66,7 @@ Validates email, must be present and unique.
 
 When creating a user a password and also a password_confirmation can be supplied, if both are the same then the user can be created (as long as the email is unique).
 
-### Sessions Route
+### Sessions Create Route
 
 In `config/routes.rb` added sessions with create as a resources.
 
@@ -79,3 +79,12 @@ Find user by email and using '&.' (safe navigation) attempt to `authenticate` wi
 If the user is authenticated set `session` with the users id, then render json with status 'created', logged_in: true, and the user object.
 
 If user find or authentication fails then json with status 401 (unauthorised) is rendered.
+
+### Registrations Create Route
+
+In `config/routes.rb` added registrations with create as a resources.
+
+In `app/controllers/registrations_controller.rb` create route:
+
+
+
