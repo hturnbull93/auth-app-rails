@@ -76,4 +76,6 @@ Find user by email and using '&.' (safe navigation) attempt to `authenticate` wi
 
 `params` are nested within user.
 
+If the user is authenticated set `session` with the users id, then render json with status 'created', logged_in: true, and the user object.
 
+If user find or authentication fails then json with status 401 (unauthorised) is rendered.
