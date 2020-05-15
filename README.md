@@ -57,3 +57,8 @@ Generate model:
 rails g model User email password_digest
 rails db:migrate
 ```
+
+In `app/models/user.rb`:
+
+Added `has_secure_password` method. This allows ActiveRecord password hashing and authentication methods with BCrypt.
+
