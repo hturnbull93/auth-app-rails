@@ -1,24 +1,24 @@
-# README
+# Rails API Authentication Practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development Journal
 
-Things you may want to cover:
+This is a learning project, based on [this tutorial](https://www.youtube.com/playlist?list=PLgYiyoyNPrv_yNp5Pzsx0A3gQ8-tfg66j), so a lot of the code is spiked, but I plan to return and TDD the project.
 
-* Ruby version
+### Generate Rails Repo
 
-* System dependencies
+Generate a Rails app with PostGreSQL db, no test (will add RSpec later), and create the db once initialised.
 
-* Configuration
+```bash
+rails new rails-auth-practice --database=postgresql -T
+rails db:create
+```
 
-* Database creation
+API only is not used as this app will leverage the regular session function offered by Rails.
 
-* Database initialization
+## Add Gems
 
-* How to run the test suite
+BCrypt for ActiveModel `has_secure_password`.
 
-* Services (job queues, cache servers, search engines, etc.)
+Rack-Cors to allow CORS requests from specified domains
 
-* Deployment instructions
 
-* ...
