@@ -38,3 +38,9 @@ Also can allow the production domain (I will add this later if this gets deploye
 In `config/initializers/session_store.rb`:
 
 Configure a session store for a cookie store, key of '_authentication_app' (name of the cookie), and the domain (localhost:3001 for now)
+
+### Routes
+
+In `config/routes.rb':
+
+Set root to static home 
