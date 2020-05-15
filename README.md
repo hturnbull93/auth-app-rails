@@ -15,13 +15,13 @@ rails db:create
 
 API only is not used as this app will leverage the regular session function offered by Rails.
 
-## Add Gems
+### Add Gems
 
 BCrypt for ActiveModel `has_secure_password`.
 
 Rack-Cors to allow CORS requests from specified domains
 
-## Prepare CORS and Session Store
+### Configure CORS
 
 In `config/initializers/cors.rb`:
 
@@ -33,9 +33,8 @@ Do this for localhost:3000 (where React app will run on in development).
 
 Also can allow the production domain (I will add this later if this gets deployed)
 
-
-
-
-
+### Configure Session Store
 
 In `config/initializers/session_store.rb`:
+
+Configure a session store for a cookie store, key of '_authentication_app' (name of the cookie), and the domain (localhost:3001 for now)
