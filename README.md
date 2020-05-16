@@ -1,11 +1,11 @@
 # Rails API Authentication Practice
 
-This is a project to practice Rails API with authentication. It interfaces with this [React front end app](https://github.com/hturnbull93/react-auth-practice).
+This is a project to practice Rails API with authentication. It interfaces with this [React front end app](https://github.com/hturnbull93/auth-app-react).
 
 ## Set Up Instructions
 
 1. Clone this repo.
-2. Clone the [React front end repo](https://github.com/hturnbull93/react-auth-practice).
+2. Clone the [React front end repo](https://github.com/hturnbull93/auth-app-react).
 3. In the Rails root directory run the following commands to set up the database and run the server:
 
     ```bash
