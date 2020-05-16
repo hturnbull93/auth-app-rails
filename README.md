@@ -92,7 +92,9 @@ User created with email, password and password_confirmation.
 
 If the user is able to be created set `session` with the users id, then render json with status 'created', logged_in: true, and the user object.
 
-If the user is unable to be created (duplicate email etc) render json with status 500 (unprocessable entity)
+If the user is unable to be created (duplicate email etc) render json with status 500 (unprocessable entity).
+
+It is important that the `create!` method is used or `user.save` is attempted so there is an error, otherwise `user` will not be committed to the database and it will be returned as 'created' but with no id.
 
 ### Disable authenticity token verification
 
