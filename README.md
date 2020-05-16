@@ -37,7 +37,9 @@ Also can allow the production domain (I will add this later if this gets deploye
 
 In `config/initializers/session_store.rb`:
 
-Configure a session store for a cookie store, key of '\_authentication_app' (name of the cookie), and the domain (localhost:3001 for now).
+Configure a session store for a cookie store, key of '_authentication_app' (name of the cookie), and the domain (placeholder for now).
+
+Used an if else statement to set this based on the environment (production or otherwise).
 
 ### Routes
 
@@ -131,11 +133,9 @@ For sessions create:
 
 ![Sessions create post request](images/Postman-sessions-create.png)
 
-### Logging out and Check logged in status
+### Check logged in status
 
 In `config/routes.rb`:
-
-Added delete /logout mapped to sessions log_out action.
 
 Added get /logged_in mapped to sessions logged_in action.
 
@@ -149,6 +149,10 @@ Included the CurrentUserConcern.
 
 Added logged_in route using `@current_user` from the concern. If there is a current user render json with logged in true and the current user, else render json with logged in false.
 
+### Logging out
+
+In `config/routes.rb`:
+
+Added delete /logout mapped to sessions log_out action.
+
 Added logout route, which resets the session with `reset_session` (better than `session.clear`), and renders json with status 200 (it worked), and logged_in false.
-
-
